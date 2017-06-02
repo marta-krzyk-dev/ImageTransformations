@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Image_filters
 {
-    class Transformation
+    class ImageTransformation
     {
         private static IEnumerable<int> Range(int start, int end, Func<int, int> step)
         {
