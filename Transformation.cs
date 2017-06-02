@@ -140,7 +140,7 @@ namespace Image_filters
             picture_box.Image = bmp;
         }
 
-        public static double Saturation(Colour colour, byte wartosc, ref PictureBox picture_box)
+        public static double Saturation(Colour colour, byte value, ref PictureBox picture_box)
         {
             Stopwatch sw = Stopwatch.StartNew();
 
@@ -189,7 +189,7 @@ namespace Image_filters
             }
 
             for (; counter < rgbValues.Length; counter += jump)
-                rgbValues[counter] = wartosc;
+                rgbValues[counter] = value;
 
             // Copy the RGB values back to the bitmap
             System.Runtime.InteropServices.Marshal.Copy(rgbValues, 0, ptr, bytes);
